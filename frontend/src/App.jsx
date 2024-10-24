@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './components/pages/home';
 import Staking from './components/pages/staking';
+import Transactions from './components/pages/transactions';
 import { getDefaultConfig, RainbowKitProvider, midnightTheme, RainbowKitAuthenticationProvider } from '@rainbow-me/rainbowkit';
 import { WagmiProvider } from 'wagmi';
 import { arbitrum, base, mainnet, optimism, polygon, sepolia } from 'wagmi/chains';
@@ -30,6 +31,7 @@ function App() {
           <Route path="/">
             <Route index element={<Home />} />
             <Route path="staking" element={<Staking />} />
+            <Route path="transactions" element={<Transactions />} />
           </Route>
         </Routes>
       </BrowserRouter>
