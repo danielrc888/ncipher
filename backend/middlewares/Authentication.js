@@ -16,6 +16,9 @@ function getTokenFromHeader(req) {
 
 module.exports = (role=null) => {
 	return async (req, res, next) => {
+		if (role === ROLE.FREE) {
+			return next()
+		}
 		const roles = [ROLE.CUSTOMER, ROLE.SPONSOR, ROLE.OWNER]
 
 		// console.log(role)

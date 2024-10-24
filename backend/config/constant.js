@@ -2,6 +2,7 @@ const ROLE = {
     CUSTOMER: 'Customer',
     SPONSOR: 'Sponsor',
     OWNER: 'Owner',
+    FREE: 'Free'
 }
 
 const NYXCIPHER_STATUS = {

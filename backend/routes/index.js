@@ -9,6 +9,7 @@ const ItemRouter = require('./item')
 const TicketRouter = require('./ticket')
 const PaymentRouter = require('./payment')
 const AuthRouter = require('./auth')
+const TransactionsRouter = require('./transaction')
 
 //------------ Welcome Route ------------//
 router.get('/', AuthMiddleware(["Customer", "Sponsor"]), (req, res) => {
@@ -21,6 +22,7 @@ router.use('/nyxcipher', NyxcipherRouter);
 router.use('/item', ItemRouter);
 router.use('/ticket', TicketRouter);
 router.use('/payment', PaymentRouter);
-router.use('/auth', AuthRouter)
+router.use('/auth', AuthRouter);
+router.use('/transactions', TransactionsRouter);
 
 module.exports = router;
